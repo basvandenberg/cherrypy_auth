@@ -1,0 +1,40 @@
+## base.html
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+
+  ## common style sheets
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu|Raleway' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="${'%sauth_css/style.css' % (root_url)}" />
+
+  ## block to add custom style sheets per page
+  <%block name="stylesheets">
+  </%block>
+
+  ## common javascript libraries and scripts
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+  
+  ## block for custom scripts per page
+  <%block name="scripts">
+  </%block>
+
+  <meta charset="utf-8">
+  <title>Hello World!</title>
+
+</head>
+
+<body>
+
+<%include file="auth_bar.html" />
+
+<div id="wrapper">
+<%block name="main_content">
+</%block>
+</div>
+
+</body>
+
+</html>
+

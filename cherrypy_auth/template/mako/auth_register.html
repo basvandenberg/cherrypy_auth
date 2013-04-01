@@ -1,0 +1,15 @@
+<div class="auth_wrapper">
+% if auth_title:
+  <h2>${auth_title}</h2>
+% endif
+  <form action='aregister' method="post" id="register_form" class="auth_form">
+    <div class="form_row">
+      <input placeholder="Email address" type="text" name="username" id="top" />
+    </div>
+    <div class="form_row">
+      <input placeholder="Password" type="password" name="password" id="bottom" />
+    </div>
+    <div id="msg"></div>
+    <input type="submit" class="submit" value="Create account" />
+  </form>
+</div>
