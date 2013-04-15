@@ -48,7 +48,7 @@ class Auth:
         msg = ''
 
         if(username == ''):
-            msg = 'You forgot to enter on email address'
+            msg = 'You forgot to enter an email address'
         else:
 
             exists = False
