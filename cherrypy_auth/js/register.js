@@ -10,7 +10,7 @@ $(document).ready(function() {
             url = $form.attr('action');
 
         if(password.length < 6) {
-            msg = 'Password must be at least 6 charaters long';
+            msg = 'Password must be at least 6 characters long';
             $('#msg').html(msg);
         }
         else {
