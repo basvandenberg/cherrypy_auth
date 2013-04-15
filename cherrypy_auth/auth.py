@@ -59,7 +59,7 @@ class Auth:
                     # remove inactivated user before adding him again
                     self.udb.delete_user(username)
                 else:
-                    msg = "User name allready exists"
+                    msg = "Email address allready exists"
                     exists = True
 
             # add user and redirect to login if user does not exist yet
