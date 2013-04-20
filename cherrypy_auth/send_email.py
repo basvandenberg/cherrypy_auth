@@ -25,9 +25,15 @@ class Email(object):
         s.ehlo()
         s.starttls()
         s.ehlo()
-
         s.login(self.user, self.password)
+
+        error_msg = ''
+
         try:
             s.sendmail(self.fr, to, msg.as_string())
+        except smtplib.SMTPRecipientsRefused:
+            error_msg = 'Unable to send email to this address'
         finally:
             s.close()
+
+        return error_msg

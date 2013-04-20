@@ -88,10 +88,14 @@ paste it into your web browser.</p>
 
 <p>SPiCa</p>
 ''' % (url, url)
-                    self.email.send_email(to, subject, content)
 
-                    # redirect location
-                    location = '%sactivate_account' % (self.root_url)
+                    # try to send the email
+                    msg = self.email.send_email(to, subject, content)
+
+                    if(msg == ''):
+                        # redirect location
+                        location = '%sactivate_account' % (self.root_url)
+
                 else:
                     msg = 'Something went wrong during registration, ' +\
                             'please try again'
