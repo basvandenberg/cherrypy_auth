@@ -5,14 +5,12 @@ from email.mime.text import MIMEText
 
 class Email(object):
 
-    def __init__(self, config_f):
-        config = ConfigParser.ConfigParser()
-        config.read(config_f)
-        self.smtp_server = config.get('email', 'smtp_server')
-        self.port = config.getint('email', 'port')
-        self.fr = config.get('email', 'from')
-        self.user = config.get('email', 'user')
-        self.password = config.get('email', 'password')
+    def __init__(self, smtp_server, port, fr, user, password):
+        self.smtp_server = smtp_server
+        self.port = port
+        self.fr = fr
+        self.user = user
+        self.password = password
 
     def send_email(self, to, subject, content):
 

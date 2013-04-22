@@ -11,17 +11,14 @@ class Auth:
 
     SESSION_USER_KEY = 'user_id'
 
-    def __init__(self, template_func, template_args, root_url, config_f):
-
-        # parse config file
-        config = ConfigParser.ConfigParser()
-        config.read(config_f)
+    def __init__(self, template_func, template_args, root_url, title,
+                 user_db_f):
 
         # title as used above authentication forms on html pages
-        self.title = config.get('auth', 'title')
+        self.title = title
 
         # the user data base sqlite file
-        self.user_db_f = config.get('sqlite', 'db_file')
+        self.user_db_f = user_db_f
 
         # store template function and default arguments
         self.template_func = template_func
@@ -32,7 +29,9 @@ class Auth:
         
         # initialize user database object and send email object
         self.udb = userdb.UserDatabase(self.user_db_f)
-        self.email = send_email.Email(config_f)
+
+    def set_email_settings(self, smtp_server, port, fr, user, password):
+        self.email = send_email.Email(smtp_server, port, fr, user, password)
 
     @cherrypy.expose
     def register(self):

@@ -12,7 +12,8 @@ class UserDatabase(object):
 
     def __init__(self, user_db_f):
         self.user_db_f = user_db_f
-        self.init_db()
+        if not(user_db_f is None):
+            self.init_db()
 
     def init_db(self):
         
