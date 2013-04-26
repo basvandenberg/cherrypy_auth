@@ -116,7 +116,7 @@ paste it into your web browser.</p>
         # try to activate account otherwise
         else:
             if(self.udb.user_active(user)):
-                msg = 'This account has allready been activated.'
+                msg = 'This account has already been activated.'
             elif(self.udb.activate_user(user, token)):
                 msg = 'Account successfully activated.'
             else:
