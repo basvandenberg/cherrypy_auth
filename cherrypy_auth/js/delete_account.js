@@ -6,7 +6,7 @@ $(document).ready(function() {
 
         var $form = $(this),
             password = $form.find('input[name="password"]').val(),
-            username = $form.find('input[name="username"]').val(),
+            username = $form.find('input[name="username"]').val().toLowerCase(),
             url = $form.attr('action');
 
         var salt = username + document.domain;

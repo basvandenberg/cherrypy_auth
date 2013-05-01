@@ -5,7 +5,7 @@ $(document).ready(function() {
         event.preventDefault();
 
         var $form = $(this),
-            username = $form.find('input[name="username"]').val(),
+            username = $form.find('input[name="username"]').val().toLowerCase(),
             password = $form.find('input[name="password"]').val(),
             url = $form.attr('action');
 

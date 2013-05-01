@@ -5,7 +5,7 @@ $(document).ready(function() {
         event.preventDefault();
 
         var $form = $(this),
-            username = $form.find('input[name="username"]').val(),
+            username = $form.find('input[name="username"]').val().toLowerCase(),
             url = $form.attr('action');
 
         var posting = $.post(url, {username: username});
