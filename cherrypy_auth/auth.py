@@ -188,18 +188,23 @@ paste it into your web browser.</p>
         return self.template_func(template, **self._template_args())
 
     @cherrypy.expose
-    def achange_password(self, password):
+    def achange_password(self, password_old, password_new):
         self._authenticate()
         cherrypy.response.headers['Content-Type'] = 'application/json'
 
         msg = ''
         location = ''
 
-        if(self.udb.change_password(self.get_user(), password)):
-            msg = 'Password successfully updated.'
-            location = 'account'
+        user = self.get_user()
+
+        if(self.udb.verify_password(user, password_old)):
+            if(self.udb.change_password(user, password_new)):
+                msg = 'Password successfully updated.'
+                location = 'account'
+            else:
+                msg = 'Something went wrong, please try again.'
         else:
-            msg = 'Something went wrong, please try again.'
+            msg = 'Password incorrect, could not change password.'
 
         return simplejson.dumps(dict(msg=msg, location=location))
 
