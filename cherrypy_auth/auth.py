@@ -109,7 +109,7 @@ paste it into your web browser.</p>
 
         # show message if no parameters provided
         if(user is None and token is None):
-            msg = 'A verification link has been send to your email ' +\
+            msg = 'A verification link has been sent to your email ' +\
             'address. Please click on the link in the email or copy and ' +\
             'paste the link into the browser address bar to activate ' +\
             'your account.'
