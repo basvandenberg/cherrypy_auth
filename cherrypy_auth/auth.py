@@ -76,16 +76,16 @@ class Auth:
                     url = '%sactivate_account/%s/%s' %\
                             (self.root_url, username, token)
                     to = username
-                    subject = 'Activation SPiCa user account'
+                    subject = 'Activation SPiCe user account'
                     content = u'''
 <p>Dear user,</p>
 
-<p>To activate your SPiCa account, either click the following link or copy and 
+<p>To activate your SPiCe account, either click the following link or copy and 
 paste it into your web browser.</p>
 
 <a href=%s>%s</a>
 
-<p>SPiCa</p>
+<p>SPiCe</p>
 ''' % (url, url)
 
                     # try to send the email
