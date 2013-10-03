@@ -1,3 +1,13 @@
-Version 0.1                                                          2013-05-31
 
+cherrypy\_auth
+==============
+
+The cherrypy\_auth package provides a very basic cherrypy authentication
+mechanism.
+
+
+Dependencies
+============
+
+None.
 
