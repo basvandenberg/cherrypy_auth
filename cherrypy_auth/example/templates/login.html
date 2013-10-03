@@ -1,0 +1,13 @@
+## login.html
+<%inherit file="base.html"/>
+
+<%block name="scripts">
+  <script type="application/javascript" src="${'%sauth_js/sha512.js' % (root_url)}"></script>
+  <script type="application/javascript" src="${'%sauth_js/login.js' % (root_url)}"></script>
+</%block>
+<%block name="stylesheets">
+</%block>
+
+<%block name="main_content">
+<%include file="auth_login.html" />
+</%block>

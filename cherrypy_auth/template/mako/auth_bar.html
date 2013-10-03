@@ -1,0 +1,15 @@
+<div id="auth_bar">
+% if user_id:
+  <div class="login_buttons">
+    <a href="${'%saccount' % (root_url)}" class="signup_button">Account</a>
+    <a href="${'%slogout' % (root_url)}" class="signup_button">Logout</a>
+  </div>
+  <div class="project_item">user: <b>${user_id}</b>
+  </div>
+% else:
+  <div class="login_buttons">
+    <a href="${'%slogin' % (root_url)}" class="signup_button">Log in</a>
+    <a href="${'%sregister' % (root_url)}" class="signup_button">Create account</a>
+  </div>
+% endif
+</div>

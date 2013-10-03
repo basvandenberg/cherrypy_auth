@@ -1,0 +1,15 @@
+<div class="auth_wrapper">
+% if auth_title:
+  <h2>${auth_title}</h2>
+% endif
+  <form action='adelete_account' method="post" id="delete_account_form" class="auth_form">
+    <div class="form_row">
+      <input placeholder="Email address" id="user_id" type="hidden" value="${user_id}" name="username" readonly>
+    </div>
+    <div class="form_row">
+      <input placeholder="Password" type="password" name="password" id="single"/>
+    </div>
+    <div id="msg"></div>
+    <input type="submit" class="submit" value="Delete account" />
+  </form>
+</div>

@@ -1,0 +1,106 @@
+div#auth_bar {
+  width: 931px;
+  height: 30px;
+  margin: 0px auto;
+  background-color: #eeeeec;
+  color: #888a85;
+  font-family: sans-serif;
+  font-size:9pt;
+}
+div.login_buttons {
+  float: right;
+  margin: 0 5px 0 0;
+}
+a.signup_button {
+  display: inline-block;
+  margin: 4px 0 0 1px;
+  padding: 0 10px;
+  height: 25px;
+  line-height: 25px;
+  border: 1px solid #babdb6;
+  border-bottom: 0;
+  background-color: #d3d7cf;
+  color: #888a85;
+  border-radius: 4px 4px 0 0;
+  text-decoration: none;
+}
+a.signup_button:hover {
+  border: 1px solid #3465a4;
+  border-bottom: 0;
+  background-color: #729fcf;
+  color: #ffffff;
+}
+
+.auth_wrapper {
+  width: 200px;
+  margin: auto;
+  padding: 30px 0 70px 0;
+}
+.auth_wrapper h2 {
+  text-align: center;
+}
+.auth_form {
+  width: 200px;
+}
+.auth_form .form_row {
+  width: 200px;
+}
+.auth_form .form_row input {
+  padding: 4px;
+  width: 188px;
+  height: 23px;
+  border: 2px solid #888a85;
+  background-color: #eeeeec;
+}
+.auth_form .form_row input#single {
+  border-radius: 3px;
+}
+.auth_form .form_row input#bottom {
+  border-radius: 0px 0px 3px 3px;
+}
+.auth_form .form_row input#top {
+  border-radius: 3px 3px 0px 0px;
+  border-bottom: 0px;
+  margin-bottom: 0px;
+}
+.auth_form input.submit {
+  width: 200px;
+  height: 33px;
+  background-color: #3465a4;
+  border: 2px solid #204a87;
+  border-radius: 3px;
+  color: #eeeeec;
+  cursor: pointer;
+  font-weight: bold;
+}
+.auth_form input.submit:hover {
+  border: 2px solid #5c3566;
+  background-color: #75507b;
+}
+.account {
+  width: 200px;
+  text-align: center;
+  font-size: 8pt;
+  color: #888a85;
+}
+.auth_form .forgot {
+  width: 200px;
+  margin-top: 10px;
+  text-align: center;
+}
+.auth_form .forgot a {
+  text-decoration: none;
+}
+.auth_form #msg {
+  color: #ce5c00;
+  font-weight: bold;
+  text-align: center;
+  font-size: 10pt;
+  padding: 10px 4px;
+}
+.auth_p {
+  width: 400px;
+  margin: auto;
+  padding: 30px 0 70px 0;
+  text-align: center;
+}
