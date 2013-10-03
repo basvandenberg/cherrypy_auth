@@ -9,5 +9,9 @@ mechanism.
 Dependencies
 ------------
 
-None.
+The following packages are required to run the software:
+
+- cherrypy
+- simplejson
+- sqlite3
 
