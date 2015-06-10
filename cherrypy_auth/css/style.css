@@ -15,7 +15,7 @@ a.signup_button {
   display: inline-block;
   margin: 4px 0 0 1px;
   padding: 0 10px;
-  height: 25px;
+  height: 26px;
   line-height: 25px;
   border: 1px solid #babdb6;
   border-bottom: 0;
@@ -47,8 +47,8 @@ a.signup_button:hover {
 }
 .auth_form .form_row input {
   padding: 4px;
-  width: 188px;
-  height: 23px;
+  width: 200px;
+  height: 35px;
   border: 2px solid #888a85;
   background-color: #eeeeec;
 }
